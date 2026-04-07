@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger ,SplitText)
 export const App = () => {
     return (
         <div className=''>
-        Hello
+        Hello world
         </div>
     )
 }
