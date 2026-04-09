@@ -61,7 +61,7 @@ const Hero = () => {
     return (
         <>
         <section id="hero" className='noisy'>
-            <h1 className='title'>LET'S SEX</h1>
+            <h1 className='title'>MOJITO</h1>
 
             <img src='/images/hero-left-leaf.png' alt='left-leaf' className='left-leaf' />
 
@@ -88,7 +88,7 @@ const Hero = () => {
             <div className='video absolute inset-0'>
                 <video
                     ref={videoRef}
-                src='/videos/input.mp4'
+                src='/videos/output.mp4'
                 muted
                 playsInline
                 preload='auto'
