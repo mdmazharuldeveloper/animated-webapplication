@@ -1,12 +1,36 @@
 import React from 'react'
+import {featureLists, socials} from "../../Constant/index.js";
+import {useGSAP} from "@gsap/react";
+import {SplitText} from "gsap/all";
+import gsap from "gsap";
 
 const About = () => {
+    useGSAP(()=>{
+        const titleSplite = SplitText.create('#about',{
+            type:'words'
+        });
+
+        const scrollTimeLine = gsap.timeline({
+            scrollTrigger:{
+                trigger:'#about',
+                start:'top center',
+                end:'top center'
+            }
+        })
+
+        scrollTimeLine.from(titleSplite.words,{
+            opacity:0, duration:1, yPercent: 100, ease:'expo.out', stagger: 0.02,
+        })
+            .from('top-grid div, .bottom-grid div',{
+                opacity:0, duration:1,  ease:'expo.out', stagger: 0.04,
+            })
+    })
     return (
         <section id="about">
             <div className='mb-16 md:px-0 px-5'>
                 <div className="content">
                    <div className='md:col-span-8'>
-                       <p className='badge'>Best Coctails</p>
+                       <p className='badge'>Best Cocktails</p>
                        <h2>Where every detail matter <span>-</span>
                            from muddle to garnish
                        </h2>
@@ -23,11 +47,39 @@ const About = () => {
                             <p className='text-sm text-white'>More than 12000 customers</p>
                         </div>
                     </div>
+                </div>
 
-                    <div className='top-grip'>
-                           <div className='md:span-3'>
+                <div className='top-grid mt-10'>
 
-                           </div>
+                    <div className='md:col-span-3'>
+                        <div className='noisy'/>
+                        <img src='/images/abt1.png' alt="Feature Lists" />
+                    </div>
+
+                    <div className='md:col-span-3 p-2'>
+                        <div className='noisy'/>
+                        <p className='md:text-3xl text-xl font-bold'>Crafted to impress</p>
+                        <hr/>
+                        <ul>
+                            {
+                                featureLists.map(feature => (<li className='' key={feature.id}>{feature}</li>))
+                            }
+                        </ul>
+                    </div>
+
+                    <div className='md:col-span-6'>
+                        <div className='noisy'/>
+                        <img src='/images/abt2.png' alt="Feature Lists" />
+                    </div>
+                </div>
+
+                <div className='bottom-grid'>
+                    <div className='md:col-span-8'>
+                        <img src='/images/abt3.png' alt='Social Media' />
+                    </div>
+
+                    <div className='md:col-span-4'>
+                        <img src='/images/abt4.png' alt='Social Media' />
                     </div>
                 </div>
             </div>
