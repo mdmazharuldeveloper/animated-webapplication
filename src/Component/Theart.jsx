@@ -30,6 +30,7 @@ export const Theart = () => {
             .to('.masked-img',{
                 scale:1.3, maskPosition:'center', maskSize:'400%', ease:'power1.inOut',duration:1,
             })
+            .to('#masked-content',{opacity:1,duration:1,ease:'power1.inOut'})
     })
 
 
@@ -58,13 +59,12 @@ export const Theart = () => {
                 </div>
 
                 <div className='masked-container'>
-
                     <h2 className='will-fade'>Sip- Worthy Perfection</h2>
                     <div id='masked-content'>
                         <h3 >Made with Craft, poured with Passion</h3>
-                        <p>This isn’t just a drink. It’s a carefully crafted moment made just for you.</p>
-                    </div>
+                        <p>This isn’t just a drink. It’s a carefully crafted moment made just for you.</p></div>
                 </div>
+
             </div>
         </div>
     )
