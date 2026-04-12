@@ -49,20 +49,20 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className='top-grid mt-10'>
+                <div className='top-grid'>
 
                     <div className='md:col-span-3'>
                         <div className='noisy'/>
                         <img src='/images/abt1.png' alt="Feature Lists" />
                     </div>
 
-                    <div className='md:col-span-3 p-2'>
+                    <div className='md:col-span-3'>
                         <div className='noisy'/>
-                        <p className='md:text-3xl text-xl font-bold'>Crafted to impress</p>
+                        <p className='md:text-3xl text-xl font-bold '>Crafted to impress</p>
                         <hr/>
-                        <ul>
+                        <ul className='space-y-2'>
                             {
-                                featureLists.map(feature => (<li className='' key={feature.id}>{feature}</li>))
+                                featureLists.map((item, index) => (<li key={index}>{item}</li>))
                             }
                         </ul>
                     </div>
