@@ -7,6 +7,7 @@ import Cocktail from "./Component/Cocktail.jsx";
 import About from "./Component/About.jsx";
 import {Theart} from "./Component/Theart.jsx";
 import Menu from "./Component/Menu.jsx";
+import Contact from "./Component/Contact.jsx";
 
 
 gsap.registerPlugin(ScrollTrigger ,SplitText)
@@ -20,6 +21,7 @@ export const App = () => {
             <About/>
             <Theart/>
             <Menu/>
+            <Contact/>
         </main>
     )
 }
