@@ -27,4 +27,4 @@ export const App = () => {
 }
 
 
-//This project is in CD/CI pipeline and deployed aws
+//This project is in CD/CI pipeline and deployed aws not running
