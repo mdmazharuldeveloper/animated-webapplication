@@ -25,3 +25,6 @@ export const App = () => {
         </main>
     )
 }
+
+
+//This project is in CD/CI pipeline and deployed aws
